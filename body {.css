@@ -1,0 +1,179 @@
+/* ===========================
+   GLOBAL & BASE STYLES
+   =========================== */
+
+:root {
+    /* Primary palette */
+    --bg-dark: #0D1B2A;
+    --bg-secondary: #1B263B;
+    --bg-mid: #415A77;
+    --text-light: #E0E1DD;
+    --accent-light: #778DA9;
+
+    /* Accent palette for tables/buttons */
+    --accent-red-dark: #590D22;
+    --accent-red-base: #A4133C;
+    --accent-red-light: #FF4D6D;
+    --accent-pale: #FFCCD5;
+
+    --font-sans: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background: var(--bg-dark);
+    color: var(--text-light);
+    padding: 20px;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    color: var(--accent-light);
+    margin-bottom: 12px;
+}
+
+/* ===========================
+   CONTAINER & CARD STYLES
+   =========================== */
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 22px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ===========================
+   FORM ELEMENTS
+   =========================== */
+
+input, select, button {
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+}
+
+input, select {
+    background: var(--bg-mid);
+    color: var(--text-light);
+}
+
+button {
+    background: var(--accent-red-base);
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: var(--accent-red-light);
+    color: #000;
+}
+
+/* ===========================
+   LIST (UL/LI) STYLES
+   =========================== */
+
+ul {
+    list-style: none;
+    padding-left: 12px;
+}
+
+li {
+    background: var(--bg-mid);
+    padding: 10px;
+    margin: 6px 0;
+    border-left: 4px solid var(--accent-red-light);
+    border-radius: 5px;
+    color: var(--text-light);
+    font-size: 16px;
+    transition: 0.2s ease;
+}
+
+li:hover {
+    background: var(--accent-pale);
+    color: #000;
+}
+
+/* Highlight completed to-dos */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+/* ===========================
+   TABLE STYLES
+   =========================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid var(--accent-red-base);
+    text-align: center;
+    font-size: 15px;
+}
+
+th {
+    background: var(--accent-red-dark);
+    color: #fff;
+    text-transform: uppercase;
+}
+
+td {
+    background: var(--bg-secondary);
+    color: var(--text-light);
+}
+
+tr:nth-child(even) td {
+    background: var(--bg-mid);
+}
+
+/* ===========================
+   MISC STYLES
+   =========================== */
+
+input:focus, select:focus, button:focus {
+    outline: 2px solid var(--accent-light);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-red-light);
+}
+
+a:hover {
+    color: var(--accent-red-base);
+    text-decoration: underline;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}

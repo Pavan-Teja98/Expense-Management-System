@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <h1>💰 Expense Management System</h1>
+
+    <div class="card">
+        <input type="text" id="title" placeholder="Expense Title">
+        <input type="number" id="amount" placeholder="Amount">
+        <select id="category">
+            <option>Food</option>
+            <option>Travel</option>
+            <option>Shopping</option>
+            <option>Bills</option>
+            <option>Other</option>
+        </select>
+        <button onclick="addExpense()">Add Expense</button>
+    </div>
+
+    <div class="card summary">
+        <h3>Total Expense: ₹ <span id="total">0</span></h3>
+    </div>
+
+    <div class="card">
+        <ul id="expenseList"></ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
